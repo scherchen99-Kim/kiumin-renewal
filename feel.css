@@ -1,0 +1,127 @@
+/* 아리 느낌 덧입히기: 남색·흰색·연회색, 넉넉한 여백, 영문 DM Sans, 원형 화살표, 사진 카드 */
+:root{
+  --navy:#0f2a44; --navy2:#16375a; --sky:#5b8fc7;
+  --blue:#1f5fa8; --blue2:#174b86;
+  --gray:#f3f5f8; --gray2:#e6eaf0; --line:#d9dfe7;
+  --text:#1b2533; --mute:#66717f; --ink:#0f1b2a;
+}
+body{font-family:"DM Sans","Pretendard Variable",Pretendard,-apple-system,sans-serif;letter-spacing:-.01em}
+h1,h2,h3,.fact strong{font-family:"DM Sans","Pretendard Variable",Pretendard,sans-serif}
+
+/* 헤더: 더 얇고 조용하게 */
+.hdr-in{height:80px}
+.gnb button{height:80px;font-size:14px;font-weight:600;letter-spacing:.04em}
+.logo img{filter:brightness(0) saturate(100%) invert(13%) sepia(36%) saturate(1900%) hue-rotate(186deg) brightness(92%)}
+
+/* 라벨 */
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--sky);margin-bottom:14px}
+.head{align-items:flex-end;margin-bottom:40px}
+.head h2{font-size:clamp(30px,3.6vw,52px);font-weight:700;letter-spacing:-.035em;line-height:1.15}
+
+/* 원형 화살표 */
+.more{display:inline-flex;align-items:center;gap:14px;font-size:14px;font-weight:600;color:var(--ink)}
+.circ{width:44px;height:44px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;transition:background .35s var(--ease),color .35s,transform .35s var(--ease);flex:none}
+.circ .chev{margin:0 2px 0 0;width:9px;height:9px}
+.more:hover .circ{background:var(--navy);border-color:var(--navy);color:#fff;transform:rotate(-45deg)}
+.more:hover .chev{transform:rotate(45deg)!important}
+
+/* 첫 화면: 남색 톤 */
+.stage-shade{background:linear-gradient(90deg,rgba(15,42,68,.82),rgba(15,42,68,.35) 55%,rgba(15,42,68,.05) 78%),linear-gradient(0deg,rgba(15,42,68,.7),transparent 55%)}
+.stage-badge{background:none;padding:0;font-size:12px;letter-spacing:.18em;color:#9cc2ec;border-bottom:1px solid rgba(156,194,236,.5);padding-bottom:6px}
+.stage h1{font-size:clamp(34px,4vw,58px);line-height:1.15;letter-spacing:-.04em}
+.stage-media{min-height:680px}
+.stage{min-height:720px}
+.teaser,.links{box-shadow:0 30px 60px -30px rgba(15,42,68,.35)}
+.links a:hover{color:var(--navy)}
+
+/* 숫자: 연회색 띠 전체 폭 */
+.facts{border:0;background:transparent;gap:0;max-width:var(--max);margin-top:96px!important;position:relative}
+.facts:before{content:"";position:absolute;inset:-48px 0;background:var(--gray);box-shadow:0 0 0 100vmax var(--gray);clip-path:inset(0 -100vmax);z-index:-1}
+html{overflow-x:clip}
+.fact,.fact.sub{background:transparent;border-left:1px solid var(--line);padding:24px 28px}
+.fact:nth-child(4n+1){border-left:0}
+.fact.sub{border-top:1px solid var(--line)}
+.fact small{color:var(--sky);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.fact.sub small{text-transform:none;letter-spacing:0;color:var(--mute);font-weight:600}
+.fact strong{color:var(--navy);font-weight:700}
+.facts:after{background:transparent;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+main{position:relative;z-index:0}
+
+/* 블록 여백 */
+.block{margin-top:clamp(96px,11vw,160px)}
+.intro{font-size:17px;line-height:1.8;color:var(--mute);margin:-16px 0 40px;max-width:760px}
+
+/* 사업분야: 사진이 꽉 찬 카드 */
+.pcard{position:relative;aspect-ratio:4/5;background:var(--navy);color:#fff;overflow:hidden}
+.pcard .ph{position:absolute;inset:0;aspect-ratio:auto}
+.pcard .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,68,0) 35%,rgba(15,42,68,.88));transition:opacity .5s}
+.pcard span{position:absolute;left:24px;right:76px;bottom:24px;padding:0;text-align:left;font-size:clamp(17px,1.4vw,20px);word-break:keep-all;overflow-wrap:normal;font-weight:700;line-height:1.3}
+.pcard .circ{position:absolute;right:20px;bottom:20px;border-color:rgba(255,255,255,.6);color:#fff}
+.pcard:hover{background:var(--navy)}
+.pcard:hover .circ{background:#fff;color:var(--navy);transform:rotate(-45deg)}
+.pcard:hover .circ .chev{transform:rotate(45deg)}
+
+/* AI 강의 칸 */
+.dcard{background:var(--gray)}
+.dcard:last-child{background:var(--navy);color:#fff}
+.dcard:last-child h3{color:#fff}
+.dcard:last-child .dtop p,.dcard:last-child li span{color:#a9b8cb}
+.dcard:last-child li{border-color:rgba(255,255,255,.15)}
+.dcard:last-child em{color:#9cc2ec;border-color:#9cc2ec}
+.dcard em{border-radius:99px;padding:3px 10px}
+.dtop{padding:36px 36px 24px}
+.dcard ul{padding:0 36px 20px}
+
+/* Projects */
+.story{background:transparent}
+.story .txt{padding:20px 0 8px}
+.story small{color:var(--sky);font-weight:700;letter-spacing:.12em}
+.story .ph{border-radius:2px}
+.story:hover h3{color:var(--blue)}
+
+/* 세로 카드: 한 가지 남색 톤으로 통일 */
+.tcard .cap,.c1 .cap,.c2 .cap,.c3 .cap,.c4 .cap,.c5 .cap,.c6 .cap{background:linear-gradient(transparent,rgba(15,42,68,.92) 55%)}
+.tcard p{color:#9cc2ec;letter-spacing:.16em;font-size:12px;font-weight:700;opacity:1;order:-1}
+.tcard .cap{display:flex;flex-direction:column;gap:8px}
+.tcard img{filter:saturate(.85)}
+
+/* 점·화살표 */
+.dots button.on{background:var(--navy)}
+.arrows button{border-radius:50%;border:1px solid var(--line);width:44px;height:44px}
+.arrows button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* SNS·문의 */
+.service{background:var(--gray);padding:clamp(32px,4vw,56px)}
+
+/* 큰 칸 2개: 남색 */
+.cta{background:var(--navy);min-height:300px;padding:clamp(32px,4vw,56px)}
+.cta:nth-child(2){background:var(--navy2)}
+a.cta:hover{background:#1b4370}
+.cta small{color:#9cc2ec;letter-spacing:.18em;opacity:1}
+.cta h3{font-size:clamp(26px,2.8vw,38px);letter-spacing:-.035em}
+.cta:before{opacity:0}
+.cta:hover:before{opacity:.25}
+
+/* 푸터 */
+footer{background:#0b1f33}
+
+@media (max-width:1024px){
+  .stage-box{background:var(--gray)}
+  .facts:before{inset:-32px 0}
+  .fact:nth-child(4n+1){border-left:1px solid var(--line)}
+  .fact:nth-child(odd){border-left:0}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .pcard{aspect-ratio:3/4}
+}
+@media (max-width:680px){
+  .stage{min-height:0}
+  .stage-media{min-height:min(78svh,560px)}
+  .facts{margin-top:64px!important}
+  .fact,.fact.sub{padding:18px 14px}
+  .head{flex-direction:row;align-items:flex-end;flex-wrap:wrap}
+  .more{font-size:13px}
+  .circ{width:38px;height:38px}
+  .dtop{padding:28px 20px 16px}
+  .dcard ul{padding:0 20px 12px}
+  .pcard{aspect-ratio:4/5}
+}
