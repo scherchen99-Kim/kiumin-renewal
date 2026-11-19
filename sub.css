@@ -93,3 +93,47 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 @media (prefers-reduced-motion:reduce){.sub-hero img{animation:none;transform:none}.crumb,.sub-hero .en,.sub-hero h1{opacity:1;animation:none}.v-circle{opacity:1;transform:none}}
 /* 원 바깥: 점 대신 짧은 호 하나가 천천히 도는 모양 */
 .v-circle circle{stroke-dasharray:26 74;stroke-width:2;opacity:.55;stroke-linecap:round}
+
+/* ── 주요연혁 ── */
+.h-intro{display:grid;grid-template-columns:1fr 1.3fr;gap:24px 56px;align-items:end;padding-bottom:clamp(36px,5vw,64px);border-bottom:2px solid var(--ink)}
+.h-intro h3{font-size:clamp(24px,2.8vw,38px);font-weight:700;letter-spacing:-.04em;line-height:1.3;color:var(--ink)}
+.h-intro h3 em{font-style:normal;color:var(--main,#001d5b);box-shadow:inset 0 -.35em 0 rgba(0,180,237,.22)}
+.h-intro p{font-size:16px;line-height:1.8;color:var(--mute)}
+.history{position:relative}
+.h-year{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:36px 0;border-bottom:1px solid var(--line)}
+.h-year h3{font-family:"DM Sans","Pretendard Variable",sans-serif;font-size:clamp(34px,3.6vw,52px);font-weight:700;letter-spacing:-.04em;color:#c8ced8;line-height:1;transition:color .6s;position:sticky;top:150px;align-self:start}
+.h-year.in h3{color:var(--main,#001d5b)}
+.h-year li{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:9px 0;font-size:16px;line-height:1.6}
+.h-year .mo{font-weight:700;color:var(--sub,#00b4ed);font-variant-numeric:tabular-nums}
+.h-year p{color:var(--text)}
+.h-year li{opacity:0;transform:translateX(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.h-year.in li{opacity:1;transform:none}
+.h-year.in li:nth-child(2){transition-delay:.06s}.h-year.in li:nth-child(3){transition-delay:.12s}.h-year.in li:nth-child(4){transition-delay:.18s}.h-year.in li:nth-child(5){transition-delay:.24s}.h-year.in li:nth-child(6){transition-delay:.3s}.h-year.in li:nth-child(7){transition-delay:.36s}
+
+/* ── 오시는길 ── */
+.loc{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.loc-map img{width:100%;height:auto}
+.loc-list{display:grid;gap:12px}
+.br{border:1px solid var(--line);padding:20px 22px;background:#fff;transition:border-color .3s,transform .35s var(--ease)}
+.br small{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--sub,#00b4ed)}
+.br h3{font-size:19px;font-weight:700;color:var(--ink);margin-top:4px}
+.br p{font-size:15px;color:var(--mute);margin-top:6px;line-height:1.55}
+.br.main{background:var(--main,#001d5b);border-color:var(--main,#001d5b)}
+.br.main h3,.br.main p{color:#fff}
+.br-links{display:flex;gap:16px;margin-top:12px;font-size:13px;font-weight:700}
+.br-links a{color:var(--blue);display:inline-flex;align-items:center;gap:2px}
+.br.main .br-links a{color:var(--sub,#00b4ed)}
+.br-links .ext{width:.65em;height:.65em}
+.br:hover{border-color:var(--main,#001d5b);transform:translateX(4px)}
+.loc-contact{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px;margin-top:clamp(36px,5vw,56px);padding-top:28px;border-top:1px solid var(--line);font-size:15px;color:var(--mute)}
+.loc-contact b{color:var(--ink);margin-left:6px}
+.loc-contact .more{margin-left:auto}
+
+@media (max-width:860px){
+  .h-intro{grid-template-columns:1fr}
+  .h-year{grid-template-columns:1fr;gap:10px;padding:28px 0}
+  .h-year h3{position:static}
+  .h-year li{grid-template-columns:44px 1fr;font-size:15px}
+  .loc{grid-template-columns:1fr}
+  .loc-contact .more{margin-left:0}
+}
