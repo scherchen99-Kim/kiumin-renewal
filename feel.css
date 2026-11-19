@@ -456,3 +456,8 @@ footer{background:#00143f}
 .story .txt{padding:12px 0 0}
 .stories{row-gap:56px}
 @media (max-width:900px){.stories{row-gap:40px}}
+/* 섹션 사이 간격 하나로 통일 (기존 149/108/72px → 88px, 폰 56px) */
+:root{--sec:clamp(56px,6.5vw,88px)}
+.block{margin-top:var(--sec)}
+.facts.counter{margin-top:var(--sec)!important}
+.inside{margin-bottom:var(--sec)}
