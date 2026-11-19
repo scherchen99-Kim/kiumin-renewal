@@ -430,3 +430,6 @@ footer{background:#00143f}
 .inside-links .aion{height:26px;margin:4px 0 2px}
 /* 아이폰에서 소개 문구는 첫 문장만 */
 @media (max-width:680px){.pc-only{display:none}.inside-links .aion{height:22px}}
+/* AION 로고 85% (26→22px, 폰 22→19px) */
+.inside-links .aion{height:22px}
+@media (max-width:680px){.inside-links .aion{height:19px}}
