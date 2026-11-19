@@ -464,3 +464,8 @@ footer{background:#00143f}
 /* 섹션 사이 구분선 통일: 선 위 56px, 선 아래 32px (합 88px) */
 .block{margin-top:calc(var(--sec) - 32px);padding-top:32px;background-image:linear-gradient(var(--line),var(--line));background-repeat:no-repeat;background-position:var(--pad) 0;background-size:calc(100% - var(--pad)*2) 1px}
 .about-biz .sub-head{padding-top:32px}
+/* 사업분야 카드: 제목 위 작은 BUSINESS AREA, 소개글-카드는 한 덩어리 */
+.pcard span{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}
+.pcard span small{font-size:11px;font-weight:700;letter-spacing:.16em;color:#00b4ed}
+.about-biz .slider{margin-top:40px}
+.pcard span small{color:rgba(255,255,255,.75)}
