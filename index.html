@@ -16,7 +16,7 @@
 <header id="hdr">
   <div class="bar" aria-hidden="true"></div>
   <div class="hdr-in">
-    <a class="logo" href="#top" aria-label="키움인 홈"><img src="assets/logo.png" alt="KIUMIN"></a>
+    <a class="logo" href="#top" aria-label="키움인 홈"><span class="logo-mark"></span><img src="assets/logo.png" alt="KIUMIN"></a>
     <nav class="gnb" aria-label="주 메뉴">
       <button data-mega="m1">ABOUT US</button>
       <button data-mega="m2">BUSINESS</button>
@@ -65,81 +65,113 @@
 
   <!-- 1. 첫 화면 (Hero Stage) -->
   <section class="stage">
-    <a class="stage-media" href="http://kiumin.co.kr/" target="_blank" rel="noopener">
-      <video autoplay muted loop playsinline preload="metadata" src="assets/mov.mp4"></video>
+    <div class="stage-media" data-hero>
+      <video autoplay muted loop playsinline preload="auto" poster="assets/kiumin_main_v3_poster.jpg" src="assets/kiumin_main_v3.mp4"></video>
       <span class="stage-shade"></span>
-      <div class="stage-copy">
-        <p class="stage-badge">AI 교육 플랫폼 오픈</p>
-        <h1><span>온라인에서 배우고,</span><span>현장에서 완성합니다<i class="chev"></i></span></h1>
-        <p>(주)키움인은 온라인강의와 오프라인실습까지 AI교육의 모든것을 하나로 잇는 교육플랫폼입니다.</p>
+      <h1 class="sr-only">(주)키움인</h1>
+      <div class="stage-copy scenes">
+        <div class="scene" data-from="0">
+          <h2 class="sc-t"><span><b>청소년의 꿈을</b></span><span><b><em>현실로</em> 이어갑니다.</b></span></h2>
+          <i class="sc-line"></i>
+          <p class="sc-p">키움인은 청소년 대상 AI·SW 체험과 진로 교육을 통해 <br>미래 인재 양성에 앞장서고 있습니다.</p>
+        </div>
+        <div class="scene" data-from="8.25">
+          <h2 class="sc-t"><span><b>모두를 위한 <em>성장플랫폼</em>으로</b></span><span><b>다양한 협력으로 함께합니다.</b></span></h2>
+          <i class="sc-line"></i>
+          <p class="sc-p">키움인은 지역 및 전국단위의 교육사업과 <br>‘디지털 새싹’ 연계 AI·SW교육 및 교사 연수 확대 <br>교육부등과의 협력을 토대로 다각적인 사업을 운영하고 있습니다.</p>
+        </div>
+        <div class="scene" data-from="16.75">
+          <h2 class="sc-t"><span><b><em>AI기술</em>을 품은 교육!</b></span><span><b>모두를 위한 미래를 열어갑니다.</b></span></h2>
+          <i class="sc-line"></i>
+          <p class="sc-p">AI기술을 접목한 전문적인 기술을 통하여 <br>더 넓은 세상으로, 미래를 여는 교육 플랫폼을 <br>키움인이 새롭게 열어갑니다.</p>
+        </div>
+        <div class="scene" data-from="23.25">
+          <h2 class="sc-t"><span><b>교육의 사각지대 해소를 모토로</b></span><span><b>열심히 달려온 <em>키움인!</em></b></span></h2>
+          <i class="sc-line"></i>
+          <p class="sc-p">2018년 창립, 소외계층 청소년을 위한 사회적 기업으로 <br>진로·코딩 교육 시작한 키움인은 지역 사회 공헌 사업과 <br>AI/SW 강사 양성 기관 및 콘텐츠 개발에 힘써왔습니다.</p>
+        </div>
+        <div class="scene sc-logo" data-from="30.75">
+          <p class="sc-small">미래를 키워나가는 교육전문그룹</p>
+          <img class="sc-mark" src="assets/logo.png" alt="KIUMIN">
+        </div>
+        <div class="sc-nav" role="tablist" aria-label="첫 화면 장면">
+          <button aria-label="1번 장면"><i></i></button><button aria-label="2번 장면"><i></i></button><button aria-label="3번 장면"><i></i></button><button aria-label="4번 장면"><i></i></button><button aria-label="5번 장면"><i></i></button>
+        </div>
       </div>
-    </a>
+    </div>
     <aside class="stage-box">
-      <a class="teaser" href="https://kiumin.cafe24.com/default/program/program01.php?sub=01">
-        <div class="ph"><img src="assets/m-op01.jpg" alt=""></div>
-        <h2>2025 디지털 새싹<i class="chev"></i></h2>
-        <p>청소년이 디지털 인재로 성장할 수 있도록 돕는 SW·AI 교육</p>
+      <div class="promo">
+        <div class="promo-head">
+          <div>
+            <p class="promo-badge"><i></i>AI 교육 플랫폼 오픈</p>
+            <h2 class="promo-t">온라인에서 배우고,<br><em>현장에서 완성합니다</em></h2>
+          </div>
+          <a class="promo-qr" href="https://m.site.naver.com/2dWd8" target="_blank" rel="noopener"><small>AI 교육 플랫폼 오픈</small><img src="assets/qr_platform.png" alt="AI 교육 플랫폼 수강 신청 QR코드"><span>지금 수강 신청</span></a>
+        </div>
+        <ul class="promo-num">
+          <li><b><span data-count="321">0</span><small>강좌</small></b><span>온라인 개설 과정</span></li>
+          <li><b><span data-count="287100">0</span><small>명</small></b><span>연간 오프라인 교육</span></li>
+          <li><b><span data-count="87">0</span><small>개</small></b><span>협력 기관 · 대학</span></li>
+        </ul>
+        <div class="promo-kind">
+          <button type="button" data-open-promo><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4M10 8.5l3 1.5-3 1.5z"/></svg>AI 온라인 강의</button>
+          <i aria-hidden="true"></i>
+          <button type="button" data-open-promo><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h12v8H3zM9 13v3M6 16h6"/><circle cx="18.5" cy="9" r="2"/><path d="M15.5 19c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5"/></svg>AI 오프라인 강의</button>
+        </div>
+        <button class="promo-more" type="button" aria-haspopup="dialog">내용 보기<span class="circ"><i class="plus"></i></span></button>
+      </div>
+      <a class="teaser-mini" href="https://kiumin.cafe24.com/default/program/program01.php?sub=01">
+        <span class="tx"><small>PROJECT | 2025</small><b>2025 디지털 새싹<i class="chev"></i></b><em>청소년이 디지털 인재로 성장할 수 있도록 돕는 SW·AI 교육</em></span>
       </a>
-      <ul class="links">
-        <li><a href="https://kiumin.cafe24.com/default/company/company01.php?sub=01">회사개요<i class="chev"></i></a></li>
-        <li><a href="http://kiumin.co.kr/" target="_blank" rel="noopener">AI 교육 플랫폼 바로가기<i class="ext"></i></a></li>
-        <li><a href="https://kiumin.cafe24.com/default/contact/contact01.php?sub=01">1:1문의<i class="chev"></i></a></li>
-      </ul>
     </aside>
   </section>
 
+  <!-- 바로가기 줄 (첫 화면 아래) -->
+  <nav class="quickbar rv" aria-label="바로가기">
+    <a href="https://kiumin.cafe24.com/default/company/company01.php?sub=01"><b>회사개요</b><span class="circ"><i class="chev"></i></span></a>
+    <a href="http://kiumin.co.kr/" target="_blank" rel="noopener"><b>AI 교육 플랫폼 바로가기</b><span class="circ"><i class="ext"></i></span></a>
+    <a href="https://kiumin.cafe24.com/default/contact/contact01.php?sub=01"><b>1:1문의</b><span class="circ"><i class="chev"></i></span></a>
+  </nav>
+
   <!-- 2. 숫자 -->
-  <section class="wrap facts rv">
-    <div class="fact"><small>Years</small><strong data-count="7" data-pad="2">00</strong></div>
-    <div class="fact"><small>Schools</small><strong data-count="1853">0</strong></div>
-    <div class="fact"><small>Students</small><strong data-count="287105">0</strong></div>
-    <div class="fact"><small>Teachers</small><strong data-count="2673">0</strong></div>
-    <div class="fact sub"><small>온라인 개설 과정</small><strong><span data-count="321">0</span><em>강좌</em></strong></div>
-    <div class="fact sub"><small>연간 오프라인 교육</small><strong><span data-count="287100">0</span><em>명</em></strong></div>
-    <div class="fact sub"><small>협력 기관 · 대학</small><strong><span data-count="87">0</span><em>개</em></strong></div>
+  <section class="wrap facts counter" aria-label="키움인 숫자">
+    <div class="fact">
+      <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="11" width="34" height="30" rx="3"/><path d="M7 19h34M16 6v9M32 6v9M15 27h4M22 27h4M29 27h4M15 33h4M22 33h4"/></svg>
+      <strong data-grow="7" data-pad="2">00</strong><small>Years</small>
+    </div>
+    <div class="fact">
+      <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 41h36M10 41V21l14-9 14 9v20M24 12V5l8 3-8 3M20 41v-9h8v9M15 25h4M29 25h4M15 32h4M29 32h4"/></svg>
+      <strong data-grow="1853">0</strong><small>Schools</small>
+    </div>
+    <div class="fact">
+      <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="16" r="6"/><path d="M6 40c0-7 5.4-12 12-12s12 5 12 12"/><circle cx="33" cy="18" r="5"/><path d="M31 28.4c1-.3 1.6-.4 2.5-.4 5.5 0 9.5 4.4 9.5 10"/></svg>
+      <strong data-grow="287105">0</strong><small>Students</small>
+    </div>
+    <div class="fact">
+      <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="18" y="6" width="25" height="18" rx="2"/><path d="M24 13h12M24 18h8"/><circle cx="12" cy="20" r="5"/><path d="M3 42c0-6 4-11 9-11 3 0 5 1 7 3l6-6"/></svg>
+      <strong data-grow="2673">0</strong><small>Teachers</small>
+    </div>
   </section>
 
-  <!-- 3. Business Area (카드 슬라이드) -->
-  <section class="wrap block" data-slider>
-    <div class="head rv"><div><p class="eyebrow">01 / BUSINESS</p><h2>Business Area</h2></div><a class="more" href="https://kiumin.cafe24.com/default/business/business01.php?sub=01">사업분야 전체 보기<span class="circ"><i class="chev"></i></span></a></div>
+  <!-- 3. 소개 + 사업분야 (하나로 합침) -->
+  <section class="wrap block about-biz" data-slider>
+    <div class="head rv"><div><p class="eyebrow">01 / ABOUT US</p><h2>청소년의 꿈을 현실로 이어갑니다.</h2></div><a class="more" href="https://kiumin.cafe24.com/default/company/company01.php?sub=01">Learn More<span class="circ"><i class="chev"></i></span></a></div>
+    <p class="intro rv">키움인은 청소년 대상 AI·SW 체험과 진로 교육을 통해 미래 인재 양성에 앞장서고 있습니다. 다양한 프로그램과 현장 경험, 그리고 쌓아온 전문성을 바탕으로 학생들이 더 넓은 세상에서 도전할 수 있도록 함께 하겠습니다.</p>
+    <div class="sub-head rv"><p class="eyebrow">BUSINESS AREA</p><a class="more" href="https://kiumin.cafe24.com/default/business/business01.php?sub=01">사업분야 전체 보기<span class="circ"><i class="chev"></i></span></a></div>
     <div class="slider">
       <div class="track">
-        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program01.php?sub=01"><div class="ph"><img src="assets/m-mb01.jpg" alt=""></div><span>AI·SW교육</span><b class="circ"><i class="chev"></i></b></a>
-        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program03.php?sub=03"><div class="ph"><img src="assets/m-mb02.jpg" alt=""></div><span>창의융합 진로·진학 교육</span><b class="circ"><i class="chev"></i></b></a>
-        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program04.php?sub=04"><div class="ph"><img src="assets/m-mb03.jpg" alt=""></div><span>Edu Camp&amp;Festa/진로박람회</span><b class="circ"><i class="chev"></i></b></a>
-        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program02.php?sub=02"><div class="ph"><img src="assets/m-mb04.jpg" alt=""></div><span>교육분야 공공서비스</span><b class="circ"><i class="chev"></i></b></a>
+        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program01.php?sub=01"><div class="ph"><img src="assets/biz_aisw.jpg" alt="" style="object-position:82% 50%"></div><span>AI·SW교육</span><b class="circ"><i class="chev"></i></b></a>
+        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program03.php?sub=03"><div class="ph"><img src="assets/biz_creative.jpg" alt="" style="object-position:50% 50%"></div><span>창의융합 진로·진학 교육</span><b class="circ"><i class="chev"></i></b></a>
+        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program04.php?sub=04"><div class="ph"><img src="assets/biz_festa.jpg" alt="" style="object-position:44% 45%"></div><span>Edu Camp&amp;Festa/진로박람회</span><b class="circ"><i class="chev"></i></b></a>
+        <a class="pcard" href="https://kiumin.cafe24.com/default/program/program02.php?sub=02"><div class="ph"><img src="assets/biz_public.jpg" alt="" style="object-position:62% 50%"></div><span>교육분야 공공서비스</span><b class="circ"><i class="chev"></i></b></a>
       </div>
     </div>
     <div class="ctrl"><div class="dots"></div><div class="arrows"><button class="prev" aria-label="이전"><i class="chev l"></i></button><button class="next" aria-label="다음"><i class="chev"></i></button></div></div>
   </section>
 
-  <!-- 4. AI 교육 (큰 칸 2개) -->
+  <!-- 4. Projects (이야기 격자 2+3) -->
   <section class="wrap block">
-    <div class="head rv"><div><p class="eyebrow">02 / PROGRAM</p><h2>AI 온라인 · 오프라인 강의</h2></div></div>
-    <p class="intro rv">(주)키움인은 공공기관·대학과 연계한 AI·디지털 교육을 기획·운영하는 인증 사회적기업입니다. 초·중·고 학생부터 교원, 대학생, 직장인, 시니어까지 전 생애 주기 AI 역량 교육을 설계합니다.</p>
-    <div class="decide">
-      <article class="dcard rv">
-        <a class="dtop" href="http://www.aitgo.kr" target="_blank" rel="noopener"><h3>AI 온라인 강의<i class="chev"></i></h3><p>www.aitgo.kr</p></a>
-        <ul>
-          <li><b>AI 활용 실무 기초</b><em>온라인 8차시</em><span>생성형 AI 도구 이해와 업무 적용 실습</span></li>
-          <li><b>교원 AI 수업 설계</b><em>온라인 6차시</em><span>수업에 바로 적용하는 AI 교안 제작과 활용</span></li>
-          <li><b>AX 프롬프트 심화</b><em>온라인 10차시</em><span>직무별 프롬프트 설계와 자동화 워크플로 구축</span></li>
-        </ul>
-      </article>
-      <article class="dcard rv">
-        <div class="dtop"><h3>AI 오프라인 강의</h3><p>대학 · 교원 · 기업 · 기관</p></div>
-        <ul>
-          <li><b>대학 직무교육</b><em>16시간 과정</em><span>교직원·조교 대상, 대학 LLM 환경 기반 실습</span></li>
-          <li><b>교원 연수</b><em>직무연수</em><span>AI·직무연수, 수업 적용형 커리큘럼</span></li>
-          <li><b>기업 · 기관 AX</b><em>맞춤 설계</em><span>대학생·직장인·사내강사 3트랙, 호남 산업 연계</span></li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- 5. Projects (이야기 격자 2+3) -->
-  <section class="wrap block">
-    <div class="head rv"><div><p class="eyebrow">03 / PROJECTS</p><h2>Projects</h2></div><a class="more" href="https://kiumin.cafe24.com/default/community/community02.php?sub=02">홍보자료 보기<span class="circ"><i class="chev"></i></span></a></div>
+    <div class="head rv"><div><p class="eyebrow">02 / PROJECTS</p><h2>Projects</h2></div><a class="more" href="https://kiumin.cafe24.com/default/community/community02.php?sub=02">홍보자료 보기<span class="circ"><i class="chev"></i></span></a></div>
     <div class="stories">
       <a class="story big rv" href="https://kiumin.cafe24.com/default/program/program01.php?sub=01"><div class="ph"><img src="assets/m-op01.jpg" alt="" loading="lazy"></div><div class="txt"><small>PROJECT | 2025</small><h3>2025 디지털 새싹<i class="chev"></i></h3><p>청소년이 디지털 인재로 성장할 수 있도록 돕는 SW·AI 교육</p></div></a>
       <a class="story big rv" href="https://kiumin.cafe24.com/default/program/program02.php?sub=02"><div class="ph"><img src="assets/m-op02.jpg" alt="" loading="lazy"></div><div class="txt"><small>PROJECT | 2025</small><h3>2025 찾아가는 학교 컨설팅<i class="chev"></i></h3><p>디지털 기반 교육 혁신 실천을 위한 맞춤형 학교 컨설팅</p></div></a>
@@ -149,58 +181,21 @@
     </div>
   </section>
 
-  <!-- 6. 소개 + 프로그램 (세로 긴 카드) -->
-  <section class="wrap block" data-slider>
-    <div class="head rv"><div><p class="eyebrow">04 / ABOUT US</p><h2>청소년의 꿈을 현실로 이어갑니다.</h2></div></div>
-    <p class="intro rv">키움인은 청소년 대상 AI·SW 체험과 진로 교육을 통해 미래 인재 양성에 앞장서고 있습니다. 다양한 프로그램과 현장 경험, 그리고 쌓아온 전문성을 바탕으로 학생들이 더 넓은 세상에서 도전할 수 있도록 함께 하겠습니다.</p>
-    <div class="slider">
-      <div class="track">
-        <a class="tcard c1" href="https://kiumin.cafe24.com/default/company/company01.php?sub=01"><img src="assets/an-img.jpg" alt=""><div class="cap"><h3>Learn More<i class="chev"></i></h3><p>회사개요</p></div></a>
-        <a class="tcard c2" href="https://kiumin.cafe24.com/default/program/program01.php?sub=01"><img src="assets/m-mb01.jpg" alt=""><div class="cap"><h3>AIㆍSW 교육<i class="chev"></i></h3><p>PROGRAM</p></div></a>
-        <a class="tcard c3" href="https://kiumin.cafe24.com/default/program/program02.php?sub=02"><img src="assets/m-mb04.jpg" alt=""><div class="cap"><h3>교육분야 공공서비스<i class="chev"></i></h3><p>PROGRAM</p></div></a>
-        <a class="tcard c4" href="https://kiumin.cafe24.com/default/program/program03.php?sub=03"><img src="assets/m-mb02.jpg" alt=""><div class="cap"><h3>창의융합 진로·진학 교육<i class="chev"></i></h3><p>PROGRAM</p></div></a>
-        <a class="tcard c5" href="https://kiumin.cafe24.com/default/program/program04.php?sub=04"><img src="assets/m-mb03.jpg" alt=""><div class="cap"><h3>Edu Camp&amp;Festa/진로박람회<i class="chev"></i></h3><p>PROGRAM</p></div></a>
-        <a class="tcard c6" href="https://kiumin.cafe24.com/default/community/community01.php?sub=01"><img src="assets/bn-img.jpg" alt=""><div class="cap"><h3>지속가능경영<i class="chev"></i></h3><p>COMMUNITY</p></div></a>
-      </div>
-    </div>
-    <div class="ctrl"><div class="dots"></div><div class="arrows"><button class="prev" aria-label="이전"><i class="chev l"></i></button><button class="next" aria-label="다음"><i class="chev"></i></button></div></div>
-  </section>
-
-  <!-- 7. SNS + 고객 문의 -->
-  <section class="wrap block">
-    <div class="service rv">
-      <div>
-        <h3>키움인 SNS</h3>
-        <p>교육행사후기와 소식을 올립니다.</p>
-        <div class="sns">
-          <a href="https://blog.naver.com/kiumin0500" target="_blank" rel="noopener" aria-label="블로그"><img src="assets/mf-icon02.png" alt=""></a>
-          <a href="https://www.instagram.com/kiuminedu" target="_blank" rel="noopener" aria-label="인스타그램"><img src="assets/mf-icon03.png" alt=""></a>
-          <a href="https://www.youtube.com/@kiumedu" target="_blank" rel="noopener" aria-label="유튜브"><img src="assets/mf-icon04.png" alt=""></a>
-        </div>
-      </div>
-      <div>
-        <h3>CONTACT US</h3>
-        <p>TEL 1899-6432 · EMAIL kiumedu@kiumin.kr</p>
-        <a class="more" href="https://kiumin.cafe24.com/default/contact/contact01.php?sub=01">1:1문의<span class="circ"><i class="chev"></i></span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. 파란 큰 버튼 2개 -->
-  <section class="wrap block cta2">
-    <div class="cta rv">
+  <!-- 7. 하단 바로가기 (KIUMIN INSIDE + 링크 목록) -->
+  <section class="wrap block inside">
+    <div class="inside-card rv">
       <small>KIUMIN INSIDE</small>
       <h3>내일의 인재와 함께하는 길,<br>키움인이 함께합니다.</h3>
-      <div class="cta-links">
+      <div class="inside-btns">
         <a href="https://kiumin.cafe24.com/default/img/community/kiumin_guide.pdf" download>회사소개서<i class="dl"></i></a>
         <a href="https://blog.naver.com/kiumin0500" target="_blank" rel="noopener">교육행사후기<i class="ext"></i></a>
       </div>
     </div>
-    <a class="cta rv" href="https://www.xn--cp5b6mf1u.kr/" target="_blank" rel="noopener">
-      <small>EVENT</small>
-      <h3>행사 홈페이지 바로가기</h3>
-      <div class="cta-links"><span>Edu Camp&amp;Festa/진로박람회<i class="ext"></i></span></div>
-    </a>
+    <ul class="inside-links rv">
+      <li><a href="https://www.xn--cp5b6mf1u.kr/" target="_blank" rel="noopener"><span><small>EVENT</small><b>행사 홈페이지 바로가기</b><em>Edu Camp&amp;Festa/진로박람회</em></span><span class="circ"><i class="ext"></i></span></a></li>
+      <li><a href="https://www.aionjournal.com/" target="_blank" rel="noopener"><span><small>JOURNAL</small><img class="aion" src="assets/aion_logo_color.png" alt="AION JOURNAL"><em>AI 온저널</em></span><span class="circ"><i class="ext"></i></span></a></li>
+      <li><a href="https://kiumin.cafe24.com/default/contact/contact01.php?sub=01"><span><small>CONTACT US</small><b>1:1문의</b><em>TEL 1899-6432 · kiumedu@kiumin.kr</em></span><span class="circ"><i class="chev"></i></span></a></li>
+    </ul>
   </section>
 </main>
 
@@ -209,9 +204,11 @@
     <div class="f-top">
       <img class="flogo" src="assets/flogo.png" alt="KIUMIN">
       <div class="f-sns">
-        <a href="https://blog.naver.com/kiumin0500" target="_blank" rel="noopener" aria-label="블로그"><img src="assets/mf-icon02.png" alt=""></a>
-        <a href="https://www.instagram.com/kiuminedu" target="_blank" rel="noopener" aria-label="인스타그램"><img src="assets/mf-icon03.png" alt=""></a>
-        <a href="https://www.youtube.com/@kiumedu" target="_blank" rel="noopener" aria-label="유튜브"><img src="assets/mf-icon04.png" alt=""></a>
+        <span class="f-sns-t">키움인 SNS</span>
+        <a class="ig" href="https://www.instagram.com/kiuminedu" target="_blank" rel="noopener" aria-label="인스타그램"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a>
+        <a class="th" href="https://www.threads.com/@kiuminedu" target="_blank" rel="noopener" aria-label="스레드"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 11.1c-.1 0-.2-.1-.3-.1-.2-3-1.8-4.7-4.6-4.7-1.7 0-3.1.7-3.9 2l1.5 1c.6-.9 1.5-1.1 2.4-1.1 1 0 1.8.3 2.2.9.3.4.5 1 .6 1.7-.8-.1-1.6-.2-2.5-.1-2.5.1-4.1 1.6-4 3.6.1 1 .6 1.9 1.4 2.4.7.5 1.6.7 2.6.6 1.3-.1 2.3-.6 3-1.5.5-.7.9-1.5 1-2.6.6.4 1.1.9 1.3 1.4.4 1 .5 2.6-.9 4-1.2 1.2-2.6 1.7-4.8 1.7-2.4 0-4.2-.8-5.4-2.3-1.1-1.4-1.7-3.5-1.7-6.1s.6-4.7 1.7-6.1C6.9 4.8 8.7 4 11.1 4c2.4 0 4.3.8 5.5 2.3.6.8 1.1 1.7 1.4 2.8l1.8-.5c-.4-1.4-1-2.6-1.8-3.6C16.5 3 14.1 2 11.1 2 8.1 2 5.8 3 4.2 5c-1.4 1.8-2.2 4.2-2.2 7.1s.8 5.3 2.2 7.1C5.8 21 8.1 22 11.1 22c2.7 0 4.5-.7 6.1-2.2 2-2 2-4.6 1.3-6.2-.4-1.1-1.2-2-1.9-2.5zm-4.7 4.4c-1.1.1-2.2-.4-2.2-1.4 0-.8.6-1.6 2.4-1.7h.6c.7 0 1.3.1 1.9.2-.2 2.4-1.4 2.9-2.7 2.9z"/></svg></a>
+        <a class="nb" href="https://blog.naver.com/kiumin0500" target="_blank" rel="noopener" aria-label="네이버 블로그"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="4" fill="currentColor"/><text x="12" y="15.6" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.2" font-weight="900" fill="#fff">blog</text></svg></a>
+        <a class="yt" href="https://www.youtube.com/@kiumedu" target="_blank" rel="noopener" aria-label="유튜브"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9l5 3-5 3z" fill="#fff"/></svg></a>
       </div>
     </div>
     <nav class="f-links">
@@ -229,6 +226,42 @@
   </div>
 </footer>
 
+
+<dialog class="promo-dlg" aria-labelledby="promoTitle">
+  <div class="dlg-in">
+    <button class="dlg-x" type="button" aria-label="닫기"><i></i><i></i></button>
+    <a class="dlg-qr" href="https://m.site.naver.com/2dWd8" target="_blank" rel="noopener"><small>AI 교육 플랫폼 오픈</small><img src="assets/qr_platform.png" alt="AI 교육 플랫폼 수강 신청 QR코드"><span>지금 수강 신청</span></a>
+    <p class="promo-badge"><i></i>AI 교육 플랫폼 오픈</p>
+    <h2 id="promoTitle">온라인에서 배우고,<br><em>현장에서 완성합니다</em></h2>
+    <p class="dlg-lead">(주)키움인은 온라인강의와 오프라인실습까지 AI교육의 모든것을 하나로 잇는 교육플랫폼입니다.</p>
+    <ul class="dlg-num">
+      <li><b>321<small>강좌</small></b><span>온라인 개설 과정</span></li>
+      <li><b>287,100<small>명</small></b><span>연간 오프라인 교육</span></li>
+      <li><b>87<small>개</small></b><span>협력 기관 · 대학</span></li>
+    </ul>
+    <p class="dlg-p">(주)키움인은 공공기관·대학과 연계한 AI·디지털 교육을 기획·운영하는 인증 사회적기업입니다.<br>초·중·고 학생부터 교원, 대학생, 직장인, 시니어까지 전 생애 주기 AI 역량 교육을 설계합니다.</p>
+    <div class="dlg-cols">
+      <section>
+        <h3>AI 온라인 강의 <a href="http://www.aitgo.kr" target="_blank" rel="noopener">www.aitgo.kr ↗</a></h3>
+        <ul>
+          <li><b>AI 활용 실무 기초</b><em>온라인 8차시</em><span>생성형 AI 도구 이해와 업무 적용 실습</span></li>
+          <li><b>교원 AI 수업 설계</b><em>온라인 6차시</em><span>수업에 바로 적용하는 AI 교안 제작과 활용</span></li>
+          <li><b>AX 프롬프트 심화</b><em>온라인 10차시</em><span>직무별 프롬프트 설계와 자동화 워크플로 구축</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3>AI 오프라인 강의</h3>
+        <ul>
+          <li><b>대학 직무교육</b><em>16시간 과정</em><span>교직원·조교 대상, 대학 LLM 환경 기반 실습</span></li>
+          <li><b>교원 연수</b><em>직무연수</em><span>AI·직무연수, 수업 적용형 커리큘럼</span></li>
+          <li><b>기업 · 기관 AX</b><em>맞춤 설계</em><span>대학생·직장인·사내강사 3트랙, 호남 산업 연계</span></li>
+        </ul>
+      </section>
+    </div>
+    <a class="dlg-cta" href="https://m.site.naver.com/2dWd8" target="_blank" rel="noopener">AI 교육 플랫폼 · 지금 수강 신청<span class="circ"><i class="ext"></i></span></a>
+  </div>
+</dialog>
 <script src="main.js"></script>
+<script src="hero.js"></script>
 </body>
 </html>
