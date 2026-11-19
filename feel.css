@@ -441,3 +441,11 @@ footer{background:#00143f}
 .quickbar .circ{width:34px;height:34px}
 .quickbar .circ .chev{width:8px;height:8px}
 @media (max-width:1024px){.quickbar{max-width:none;margin-top:0}.quickbar a{justify-content:space-between;padding:14px 18px}}
+
+/* 사업분야 카드: 파란 그라데이션 대신 글자 뒤만 살짝 누르는 투명 띠 */
+.pcard .ph:after{background:none}
+.pcard:after{content:"";position:absolute;left:0;right:0;bottom:0;height:96px;background:rgba(0,0,0,.32);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);z-index:1;transition:background .35s}
+.pcard span,.pcard .circ{z-index:2}
+.pcard span{bottom:0;top:auto;height:96px;display:flex;align-items:center;left:22px}
+.pcard .circ{bottom:24px}
+.pcard:hover:after{background:rgba(0,0,0,.45)}
