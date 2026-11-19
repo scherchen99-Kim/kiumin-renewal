@@ -8,7 +8,9 @@
   const bars = [...hero.querySelectorAll('.sc-nav button')];
   let cur = -1;
 
-  const sceneAt = (t) => { let i = 0; starts.forEach((s, k) => { if (t >= s) i = k; }); return i; };
+  const loopAt = +(hero.dataset.loop || 0);
+  // 끝 2초는 첫 장면으로 넘어가는 구간이라 첫 장면 문구를 미리 보여줌
+  const sceneAt = (t) => { if (loopAt && t >= loopAt) return 0; let i = 0; starts.forEach((s, k) => { if (t >= s) i = k; }); return i; };
 
   function show(i) {
     if (i === cur) return;
@@ -25,7 +27,7 @@
   }
 
   function tick() {
-    const t = v.currentTime || 0, d = v.duration || 29;
+    const t = v.currentTime || 0, d = v.duration || 27;
     const i = sceneAt(t);
     show(i);
     bars.forEach((b, k) => {
