@@ -25,7 +25,7 @@
   }
 
   function tick() {
-    const t = v.currentTime || 0, d = v.duration || 39;
+    const t = v.currentTime || 0, d = v.duration || 35;
     const i = sceneAt(t);
     show(i);
     bars.forEach((b, k) => {
@@ -103,4 +103,21 @@ document.querySelectorAll('[data-open-promo]').forEach((b) => b.addEventListener
     io.disconnect();
   }), { threshold: 0.35 });
   io.observe(box);
+})();
+
+// 폰에서 다른 앱 갔다 돌아오면 영상이 멈춰 있는 문제: 다시 보이면 이어서 재생
+(() => {
+  const v = document.querySelector('[data-hero] video');
+  if (!v) return;
+  v.muted = true; v.playsInline = true;
+  const resume = () => { if (document.visibilityState === 'visible' && v.paused) v.play().catch(() => {}); };
+  document.addEventListener('visibilitychange', resume);
+  addEventListener('pageshow', resume);
+  addEventListener('focus', resume);
+  // 절전 모드 등으로 자동재생이 막혔으면 첫 터치·스크롤 때 재생
+  const kick = () => { resume(); removeEventListener('touchstart', kick); removeEventListener('scroll', kick); };
+  addEventListener('touchstart', kick, { passive: true });
+  addEventListener('scroll', kick, { passive: true });
+  // 멈춘 채 남지 않게 3초마다 한 번 확인
+  setInterval(resume, 3000);
 })();
