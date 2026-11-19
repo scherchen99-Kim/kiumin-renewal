@@ -25,7 +25,7 @@
   }
 
   function tick() {
-    const t = v.currentTime || 0, d = v.duration || 35;
+    const t = v.currentTime || 0, d = v.duration || 29;
     const i = sceneAt(t);
     show(i);
     bars.forEach((b, k) => {
