@@ -421,3 +421,5 @@ footer{background:#00143f}
 .flogo{height:40px;width:auto;display:block}
 .f-sns{align-self:center}
 @media (max-width:680px){.flogo{height:32px}}
+/* 푸터 로고: 살짝 오른쪽(+5px), 투명도 30% */
+.flogo{margin-left:5px;opacity:.3}
