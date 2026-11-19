@@ -411,3 +411,13 @@ footer{background:#00143f}
 /* 서브 색 #00b4ed (C75) — 하늘색은 모두 이 색 */
 :root{--sub:#00b4ed;--sky:#00b4ed}
 .bar{background:linear-gradient(90deg,#001d5b,#00b4ed,#001d5b,#00b4ed);background-size:200% 100%}
+
+/* 원본 로고(그라데이션) 그대로 사용 */
+.logo .logo-mark{display:none}
+.logo img{opacity:1;height:36px;width:auto;filter:none}
+@media (max-width:680px){.logo img{height:30px}}
+/* 푸터 로고: 크게(26→40px), 오른쪽 SNS 줄과 가운데 맞춤, 왼쪽 끝은 아래 글자와 맞춤 */
+.f-top{align-items:center;padding-bottom:32px}
+.flogo{height:40px;width:auto;display:block}
+.f-sns{align-self:center}
+@media (max-width:680px){.flogo{height:32px}}
