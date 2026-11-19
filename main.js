@@ -31,7 +31,7 @@
   addEventListener('scroll', () => {
     const y = scrollY;
     hdr.classList.toggle('shadow', y > 10);
-    if (!document.body.classList.contains('mega-open')) hdr.classList.toggle('hide', y > 300 && y > lastY);
+    /* 헤더는 항상 고정 (숨기지 않음) */
     lastY = y;
   }, { passive: true });
 
@@ -51,9 +51,29 @@
     document.querySelector('.mega').setAttribute('aria-hidden', 'true');
     gnbBtns.forEach((b) => b.classList.remove('on'));
   }
-  gnbBtns.forEach((b) => b.addEventListener('click', () => {
-    (b.classList.contains('on') ? closeMega : () => openMega(b.dataset.mega))();
-  }));
+  /* 상단 메뉴: 각 메뉴 바로 아래 작은 드롭다운 (전체 메뉴는 오른쪽 ≡ 버튼) */
+  gnbBtns.forEach((b) => {
+    const wrap = document.createElement('div'); wrap.className = 'gi';
+    b.parentNode.insertBefore(wrap, b); wrap.appendChild(b);
+    const src = document.getElementById(b.dataset.mega);
+    const dd = document.createElement('div'); dd.className = 'dd';
+    dd.innerHTML = src ? src.querySelector('ul').outerHTML : '';
+    const here = location.pathname.split('/').pop();
+    dd.querySelectorAll('a').forEach((a) => { if (a.getAttribute('href') === here) { a.classList.add('cur'); b.classList.add('cur'); } });
+    wrap.appendChild(dd);
+    b.setAttribute('aria-expanded', 'false');
+    const close = () => { wrap.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); };
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const o = !wrap.classList.contains('open');
+      document.querySelectorAll('.gnb .gi.open').forEach((w) => w.classList.remove('open'));
+      if (body.classList.contains('mega-open')) closeMega();
+      wrap.classList.toggle('open', o); b.setAttribute('aria-expanded', String(o));
+    });
+    wrap.addEventListener('mouseleave', close);
+  });
+  document.addEventListener('click', () => document.querySelectorAll('.gnb .gi.open').forEach((w) => w.classList.remove('open')));
+  addEventListener('keydown', (e) => e.key === 'Escape' && document.querySelectorAll('.gnb .gi.open').forEach((w) => w.classList.remove('open')));
   burger.addEventListener('click', () => body.classList.contains('mega-open') ? closeMega() : openMega(null));
   document.querySelector('.scrim').addEventListener('click', closeMega);
   addEventListener('keydown', (e) => e.key === 'Escape' && closeMega());
