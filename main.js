@@ -124,3 +124,14 @@
     }, { once: true });
   }
 })();
+
+/* 화면 오른쪽 고정 TOP 버튼 (모든 페이지 공통) */
+(() => {
+  const b = document.createElement('a');
+  b.className = 'ftop'; b.href = '#top'; b.setAttribute('aria-label', '맨 위로');
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg><span>TOP</span>';
+  b.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  document.body.appendChild(b);
+  const on = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', on, { passive: true }); on();
+})();

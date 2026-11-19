@@ -471,3 +471,12 @@ footer{background:#00143f}
 .pcard span small{color:rgba(255,255,255,.75)}
 /* EDU 카드: 정사각 사진을 폭에 맞춰 위에 붙임 (E·D·U가 글자 띠 위로 오도록) */
 .pcard img.fitw{height:auto;aspect-ratio:1}
+/* 고정 TOP 버튼 */
+.ftop{position:fixed;right:24px;bottom:24px;z-index:90;width:52px;height:52px;border-radius:50%;background:var(--main,#001d5b);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;box-shadow:0 8px 20px rgba(0,29,91,.25);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,visibility .3s,background .2s}
+.ftop.show{opacity:1;visibility:visible;transform:none}
+.ftop:hover{background:#00b4ed}
+.ftop svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:-2px}
+.ftop span{font-size:10px;font-weight:700;letter-spacing:.08em;font-family:"DM Sans",sans-serif}
+@media (max-width:680px){.ftop{right:16px;bottom:16px;width:44px;height:44px}.ftop svg{width:15px;height:15px}.ftop span{font-size:9px}}
+footer .totop{display:none}
+.ftop{border:1px solid rgba(255,255,255,.28)}
