@@ -423,3 +423,10 @@ footer{background:#00143f}
 @media (max-width:680px){.flogo{height:32px}}
 /* 푸터 로고: 살짝 오른쪽(+5px), 투명도 30% */
 .flogo{margin-left:5px;opacity:.3}
+
+/* 영상 끝 로고: 여백 없는 로고로 '미래를' 글자와 왼쪽 끝 맞춤 */
+.sc-mark{height:clamp(44px,4.6vw,66px)}
+/* AION 저널: 조금 크게(20→26px), 여백 없는 이미지로 위아래 글자와 왼쪽 끝 맞춤 */
+.inside-links .aion{height:26px;margin:4px 0 2px}
+/* 아이폰에서 소개 문구는 첫 문장만 */
+@media (max-width:680px){.pc-only{display:none}.inside-links .aion{height:22px}}
