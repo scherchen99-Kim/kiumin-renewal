@@ -433,3 +433,11 @@ footer{background:#00143f}
 /* AION 로고 85% (26→22px, 폰 22→19px) */
 .inside-links .aion{height:22px}
 @media (max-width:680px){.inside-links .aion{height:19px}}
+
+/* 바로가기 줄: 전체 폭·높이 줄이고 글자-아이콘 붙이기 */
+.quickbar{max-width:880px;margin-top:-34px}
+.quickbar a{justify-content:center;gap:14px;padding:16px 20px}
+.quickbar b{font-size:16px}
+.quickbar .circ{width:34px;height:34px}
+.quickbar .circ .chev{width:8px;height:8px}
+@media (max-width:1024px){.quickbar{max-width:none;margin-top:0}.quickbar a{justify-content:space-between;padding:14px 18px}}
