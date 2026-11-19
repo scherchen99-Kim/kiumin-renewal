@@ -452,3 +452,7 @@ footer{background:#00143f}
 
 /* 메인 영상 위 파란 막: 글자 있는 왼쪽 아래만 남기고 영역 줄임 */
 .stage-shade{background:linear-gradient(90deg,rgba(0,29,91,.62),rgba(0,29,91,.22) 38%,rgba(0,29,91,0) 58%),linear-gradient(0deg,rgba(0,29,91,.55),rgba(0,29,91,0) 42%)}
+/* Projects: 사진-설명 붙이고, 줄 사이는 띄움 */
+.story .txt{padding:12px 0 0}
+.stories{row-gap:56px}
+@media (max-width:900px){.stories{row-gap:40px}}
