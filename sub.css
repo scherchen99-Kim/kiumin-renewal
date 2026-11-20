@@ -325,3 +325,8 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 .ev-body .ev-c .ph{width:clamp(120px,15vw,200px)}
 .ev-body .ev-grid{max-width:none;justify-self:stretch;grid-template-columns:repeat(4,1fr);gap:6px}
 @media (max-width:860px){.ev-body .ev-grid{grid-template-columns:repeat(2,1fr)}.ev-body .ev-c .ph{width:min(26vw,120px)}}
+/* 동그라미 설명: 사업 구분(파란 글자)을 크게, 행사명은 작게 */
+.ev-body .ev-c figcaption{gap:6px}
+.ev-body .ev-c small{font-size:18px;font-weight:700;letter-spacing:-.02em;color:var(--sky,#00b4ed)}
+.ev-body .ev-c b{font-size:13px;font-weight:500;color:var(--mute);line-height:1.5}
+@media (max-width:860px){.ev-body .ev-c small{font-size:14px}.ev-body .ev-c b{font-size:11px}}
