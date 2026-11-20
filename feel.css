@@ -499,3 +499,7 @@ body{overflow-x:clip}
 .gnb button:focus:not(:focus-visible){outline:none}
 .gnb .dd:before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
 .gnb .gi.shut .dd{opacity:0!important;visibility:hidden!important}
+/* 팝업 하단: 오늘 하루 보지 않기 / 닫기 */
+.promo-dlg .dlg-foot{display:flex;justify-content:space-between;align-items:center;background:#0b1530;padding:0 20px;height:48px}
+.promo-dlg .dlg-foot button{font-size:13px;color:rgba(255,255,255,.75);padding:8px 0;background:none;border:0;cursor:pointer}
+.promo-dlg .dlg-foot button:hover{color:#fff}

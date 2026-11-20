@@ -68,7 +68,14 @@
   const close = () => dlg.close();
   dlg.querySelector('.dlg-x').addEventListener('click', close);
   dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
-  dlg.addEventListener('close', () => { document.body.style.overflow = ''; btn.focus(); });
+  let auto = false;
+  dlg.addEventListener('close', () => { document.body.style.overflow = ''; if (!auto) btn.focus(); auto = false; });
+  /* 첫 화면 자동 팝업 (페이지 안 레이어라 팝업 차단과 무관) + 오늘 하루 보지 않기 */
+  const KEY = 'kiumin_popup_hide', today = new Date().toISOString().slice(0, 10);
+  let hidden = false; try { hidden = localStorage.getItem(KEY) === today; } catch (e) {}
+  const skip = dlg.querySelector('.dlg-today');
+  if (skip) skip.addEventListener('click', () => { try { localStorage.setItem(KEY, today); } catch (e) {} close(); });
+  if (!hidden) setTimeout(() => { if (!dlg.open) { auto = true; dlg.showModal(); document.body.style.overflow = 'hidden'; } }, 1200);
 })();
 document.querySelectorAll('[data-open-promo]').forEach((b) => b.addEventListener('click', () => document.querySelector('.promo-more').click()));
 
