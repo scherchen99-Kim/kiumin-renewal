@@ -503,3 +503,31 @@ body{overflow-x:clip}
 .promo-dlg .dlg-foot{display:flex;justify-content:space-between;align-items:center;background:#0b1530;padding:0 20px;height:48px}
 .promo-dlg .dlg-foot button{font-size:13px;color:rgba(255,255,255,.75);padding:8px 0;background:none;border:0;cursor:pointer}
 .promo-dlg .dlg-foot button:hover{color:#fff}
+/* 팝업: 하단 '오늘 하루 보지 않기'가 늘 보이게, 내용만 스크롤 */
+.promo-dlg[open]{display:flex;flex-direction:column}
+.promo-dlg .dlg-in{flex:1 1 auto;min-height:0;max-height:none}
+.promo-dlg .dlg-foot{flex:none}
+.dlg-x:focus:not(:focus-visible){outline:none}
+/* 폰: 짧고 가볍게 */
+@media (max-width:680px){
+  .promo-dlg{width:calc(100% - 28px);max-height:calc(100svh - 120px)}
+  .promo-dlg .dlg-in{padding:22px 20px 20px}
+  .promo-dlg .dlg-qr,.promo-dlg .dlg-p{display:none}
+  .dlg-x{right:8px;top:8px}
+  .promo-dlg .promo-badge{font-size:12px}
+  .promo-dlg h2{font-size:25px;margin:8px 0 10px;padding-right:36px}
+  .dlg-lead{font-size:14px;line-height:1.55}
+  .dlg-num{margin:16px 0}
+  .dlg-num li{padding:12px 0}
+  .dlg-num b{font-size:20px}
+  .dlg-num span{font-size:11px}
+  .dlg-cols{gap:8px;margin-top:0}
+  .dlg-cols section{padding:14px 16px}
+  .dlg-cols h3{font-size:15px;margin-bottom:4px}
+  .dlg-cols li{padding:8px 0}
+  .dlg-cols b{font-size:14px}
+  .dlg-cols li span{display:none}
+  .dlg-cta{margin-top:12px;padding:12px 16px;font-size:14px}
+  .dlg-cta .circ{width:30px;height:30px}
+  .promo-dlg .dlg-foot{height:44px;padding:0 18px}
+}
