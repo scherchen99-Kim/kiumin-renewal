@@ -358,3 +358,4 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 @media (max-width:860px){.lnb .crumb{display:none}}
 .lnb .crumb{margin:0 0 0 auto}
 @media (max-width:1100px){.lnb .crumb{display:none}}
+.biz-sec{scroll-margin-top:170px}

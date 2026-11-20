@@ -59,7 +59,7 @@
     const dd = document.createElement('div'); dd.className = 'dd';
     dd.innerHTML = src ? src.querySelector('ul').outerHTML : '';
     const here = location.pathname.split('/').pop();
-    dd.querySelectorAll('a').forEach((a) => { if (a.getAttribute('href') === here) { a.classList.add('cur'); b.classList.add('cur'); } });
+    dd.querySelectorAll('a').forEach((a) => { const h = a.getAttribute('href').split('#')[0]; if (h === here) { if (!a.getAttribute('href').includes('#')) a.classList.add('cur'); b.classList.add('cur'); } });
     wrap.appendChild(dd);
     b.setAttribute('aria-expanded', 'false');
     const close = () => { wrap.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); };
@@ -70,7 +70,9 @@
       if (body.classList.contains('mega-open')) closeMega();
       wrap.classList.toggle('open', o); b.setAttribute('aria-expanded', String(o));
     });
-    wrap.addEventListener('mouseleave', close);
+    wrap.addEventListener('mouseleave', () => { close(); wrap.classList.remove('shut'); });
+    dd.addEventListener('click', () => { close(); wrap.classList.add('shut'); if (document.activeElement) document.activeElement.blur(); });
+    wrap.addEventListener('mouseenter', () => document.querySelectorAll('.gnb .gi.open').forEach((w) => { if (w !== wrap) w.classList.remove('open'); }));
   });
   document.addEventListener('click', () => document.querySelectorAll('.gnb .gi.open').forEach((w) => w.classList.remove('open')));
   addEventListener('keydown', (e) => e.key === 'Escape' && document.querySelectorAll('.gnb .gi.open').forEach((w) => w.classList.remove('open')));
