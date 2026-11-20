@@ -330,3 +330,20 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 .ev-body .ev-c small{font-size:18px;font-weight:700;letter-spacing:-.02em;color:var(--sky,#00b4ed)}
 .ev-body .ev-c b{font-size:13px;font-weight:500;color:var(--mute);line-height:1.5}
 @media (max-width:860px){.ev-body .ev-c small{font-size:14px}.ev-body .ev-c b{font-size:11px}}
+/* 서브 페이지 여백 압축: 1920px 모니터 첫 화면에 내용이 보이도록 */
+.sub-hero{height:clamp(200px,16vw,300px)}
+.sub-sec{padding-top:clamp(36px,3.4vw,60px)}
+.sub-sec:last-of-type{padding-bottom:clamp(64px,7vw,110px)}
+.sub-head{margin-bottom:clamp(18px,2vw,28px)}
+.biz-sec{padding-top:clamp(28px,2.6vw,44px)!important}
+.biz-sec+.biz-sec{padding-top:clamp(44px,4.4vw,72px)!important}
+.biz-sec .biz-h{padding-top:24px}
+.biz-edu,.re-cols,.tp-list{margin-top:clamp(24px,2.6vw,36px)}
+.ev-cats{margin-top:clamp(20px,2.4vw,32px)}
+/* 탭 메뉴 앞줄을 본문 왼쪽 선에 맞춤 */
+.lnb .wrap{gap:clamp(24px,3vw,44px)}
+.lnb a{padding:18px 0}
+.lnb a:after{left:0;right:0}
+/* PROGRAM 번호 앞 아이콘: 깃대 있는 깃발(학교 의미) */
+.p-no i{width:18px;height:20px;clip-path:none;background:none;position:relative;flex:none}
+.p-no i:before{content:"";position:absolute;inset:0;background:var(--main,#001d5b);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 20'%3E%3Crect x='0' y='0' width='2.4' height='20'/%3E%3Cpath d='M2.4 0H18l-3.5 6.5L18 13H2.4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 20'%3E%3Crect x='0' y='0' width='2.4' height='20'/%3E%3Cpath d='M2.4 0H18l-3.5 6.5L18 13H2.4z'/%3E%3C/svg%3E") center/contain no-repeat}
