@@ -316,3 +316,12 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
   .ev-body .ev-grid .ph:last-child{display:block}
 }
 @media (max-width:860px){.ev-body{grid-template-columns:1fr;gap:24px}.ev-body .ev-grid{justify-self:stretch}.ev-body .ev-circles{gap:10px}}
+/* 전시 사진 고해상도 교체: 격자 4칸 x 3줄 */
+.ev-body .ev-grid{grid-template-columns:repeat(4,1fr);max-width:560px}
+@media (max-width:860px){.ev-body .ev-grid{grid-template-columns:repeat(3,1fr);max-width:none}}
+/* 고해상도 사진: 동그라미 3장 위, 격자 12장 아래 넓게 */
+.ev-body{grid-template-columns:1fr;gap:clamp(32px,4vw,48px)}
+.ev-body .ev-circles{max-width:900px;width:100%;justify-self:center}
+.ev-body .ev-c .ph{width:clamp(120px,15vw,200px)}
+.ev-body .ev-grid{max-width:none;justify-self:stretch;grid-template-columns:repeat(4,1fr);gap:6px}
+@media (max-width:860px){.ev-body .ev-grid{grid-template-columns:repeat(2,1fr)}.ev-body .ev-c .ph{width:min(26vw,120px)}}
