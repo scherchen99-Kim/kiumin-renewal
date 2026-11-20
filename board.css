@@ -1,0 +1,106 @@
+/* ─────────────────────────────────────────────
+   키움인 게시판·문의폼 스타일 (cafe24 com_board / com_formmail 용)
+   cafe24가 출력하는 마크업은 그대로 두고, .board-area 안에서만 덮어씀
+   ───────────────────────────────────────────── */
+.board-area{max-width:calc(var(--max,1200px) + var(--pad,40px)*2);margin:0 auto;padding:clamp(56px,7vw,96px) var(--pad,40px) clamp(80px,10vw,140px);color:var(--ink,#0f1b2d);font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif}
+.board-area .tit-sub01{font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-.04em;line-height:1.25;color:var(--ink,#0f1b2d);margin:0 0 clamp(28px,4vw,40px);text-align:left}
+.board-area .tit-sub01:before{content:"PRESS & NOTICE";display:block;font-size:12px;font-weight:700;letter-spacing:.2em;color:#00b4ed;margin-bottom:10px;font-family:"DM Sans",sans-serif}
+.board-area.form .tit-sub01:before{content:"CONTACT US"}
+.board-area table{border-collapse:collapse;border-spacing:0;width:100%!important;background:transparent!important}
+.board-area td{border:0;padding:0}
+.board-area font{color:inherit!important;font-size:inherit!important;font-weight:inherit!important}
+.board-area a{color:inherit;text-decoration:none}
+
+/* ── 목록 ── */
+.board-area .board-wrap{border-top:2px solid var(--main,#001d5b)}
+.board-area .board-wrap tr:first-child td.att_title{font-size:13px;font-weight:700;color:var(--mute,#5b6676);letter-spacing:.02em;padding:16px 12px;border-bottom:1px solid var(--line,#d9dfe7);background:#f7f9fc}
+.board-area .board-wrap tr[onclick]{height:auto!important;transition:background .2s}
+.board-area .board-wrap tr[onclick]:hover{background:#f2f6fb}
+.board-area .board-wrap tr[onclick] td{padding:22px 12px;border-bottom:1px solid var(--line,#d9dfe7);vertical-align:middle}
+.board-area td.bbsno{width:80px;font-size:14px;color:var(--mute,#5b6676);font-family:"DM Sans",sans-serif}
+.board-area td.bbsnewf5{font-size:16px;font-weight:600;line-height:1.5;word-break:keep-all}
+.board-area tr[onclick]:hover td.bbsnewf5 a{color:var(--main,#001d5b)}
+.board-area td.bbsetc_add1{width:130px;font-size:14px;color:var(--mute,#5b6676);font-family:"DM Sans",sans-serif;white-space:nowrap}
+.board-area td.bbsetc_add2{width:100px;font-size:13px;color:#9aa3b0;white-space:nowrap}
+
+/* 페이지 번호 */
+.board-area td.paging{padding-top:8px;font-family:"DM Sans",sans-serif;font-size:15px}
+.board-area td.paging b,.board-area td.paging a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;margin:0 2px;padding:0 6px;border:1px solid transparent;color:var(--mute,#5b6676)}
+.board-area td.paging b{background:var(--main,#001d5b);color:#fff;border-color:var(--main,#001d5b)}
+.board-area td.paging a:hover{border-color:var(--main,#001d5b);color:var(--main,#001d5b)}
+
+/* 검색 */
+.board-area #ext_search{display:flex;justify-content:center;margin-top:24px}
+.board-area #search_table td{padding:0 3px}
+.board-area #search_table select,.board-area #search_table input[type=text]{height:46px;border:1px solid var(--line,#d9dfe7);background:#fff;font-size:15px;padding:0 14px;border-radius:0;margin:0;font-family:inherit;color:var(--ink,#0f1b2d)}
+.board-area #search_table select{padding-right:32px}
+.board-area #search_table input[type=text]{width:min(320px,52vw)}
+.board-area #search_table input[type=text]:focus,.board-area #search_table select:focus{outline:0;border-color:var(--main,#001d5b)}
+/* 검색 버튼: cafe24 search.gif 이미지를 가리고 돋보기로 */
+.board-area #search_table input[type=image]{box-sizing:border-box;width:46px;height:46px;padding:46px 0 0 46px!important;overflow:hidden;border:0!important;background:var(--main,#001d5b) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") center/20px no-repeat;cursor:pointer}
+
+/* ── 글 보기 ── */
+.board-area #gallery_board_view{border-top:2px solid var(--main,#001d5b)}
+.board-area #gallery_board_view td.board_bgcolor{display:none}
+.board-area #gallery_board_view td.board_desc{display:block;width:auto!important;padding:28px 4px 24px!important;font-size:clamp(20px,2vw,26px);font-weight:700;line-height:1.45;letter-spacing:-.03em;color:var(--ink,#0f1b2d);border-bottom:1px solid var(--line,#d9dfe7);word-break:keep-all}
+.board-area #gallery_board_view td.board_description{padding:36px 4px 48px!important;height:auto!important}
+.board-area #post_area{padding:0!important;font-size:16px;line-height:1.85;color:#333}
+.board-area #post_area p,.board-area #post_area span{font-family:inherit!important;line-height:1.85!important}
+.board-area #post_area img{max-width:100%!important;height:auto!important;display:block;margin:0 auto 24px}
+.board-area #post_area a{color:var(--main,#001d5b)!important;text-decoration:underline;word-break:break-all}
+/* 첨부파일 줄: 파일이 없으면 칸만 남으므로 정리 */
+.board-area #gallery_board_view tr:last-child td{border-top:1px solid var(--line,#d9dfe7);padding:16px 4px!important;font-size:14px;color:var(--mute,#5b6676)}
+.board-area #gallery_board_view tr:last-child td.board_bgcolor{display:table-cell;width:110px!important;font-weight:700}
+.board-area #gallery_board_view tr:last-child td.board_desc{display:table-cell;font-size:14px;font-weight:500;border-bottom:0;padding:16px 4px!important}
+/* 목록 버튼: list.gif 대신 글자 버튼 */
+.board-area td.bbsnewf5[height] a{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 26px;background:var(--main,#001d5b);color:#fff;font-size:15px;font-weight:600;margin-top:24px;transition:background .2s}
+.board-area td.bbsnewf5[height] a:hover{background:#00b4ed}
+.board-area td.bbsnewf5[height] a img{display:none}
+.board-area td.bbsnewf5[height] a:after{content:"목록으로"}
+
+/* ── 1:1 문의 (formmail) ── */
+.board-area .inquiry-wrap{border-top:2px solid var(--main,#001d5b)}
+.board-area .inquiry-wrap > tbody > tr > td,.board-area .inquiry-wrap > tr > td{border-bottom:1px solid var(--line,#d9dfe7)}
+.board-area td.formmail_title_bgcolor{width:180px!important;padding:18px 20px!important;background:#f7f9fc;font-size:15px;font-weight:700;text-align:left!important;vertical-align:top;color:var(--ink,#0f1b2d)}
+.board-area td.formmail_cell_bgcolor{padding:12px 16px!important;background:#fff}
+.board-area .inquiry-wrap input[type=text],.board-area .inquiry-wrap select,.board-area .inquiry-wrap textarea.formmail_textarea_style{width:100%;max-width:560px;height:48px;border:1px solid var(--line,#d9dfe7);border-radius:0;padding:0 14px;font-size:15px;font-family:inherit;background:#fff;color:var(--ink,#0f1b2d)}
+.board-area .inquiry-wrap textarea.formmail_textarea_style{max-width:none;height:220px!important;padding:12px 14px;line-height:1.6;resize:vertical}
+.board-area .inquiry-wrap input:focus,.board-area .inquiry-wrap select:focus,.board-area .inquiry-wrap textarea:focus{outline:0;border-color:var(--main,#001d5b)}
+.board-area .inquiry-wrap input[type=file]{border:0;padding:8px 0;height:auto;font-size:14px}
+/* 개인정보 동의 */
+.board-area .inquiry-wrap td[colspan="2"]{padding:24px 0 0!important;border-bottom:0}
+.board-area .inquiry-wrap td[colspan="2"] table td{font-size:14px;color:var(--mute,#5b6676);padding:0 0 10px!important}
+.board-area .inquiry-wrap td[colspan="2"] input[type=checkbox]{width:18px;height:18px;accent-color:var(--main,#001d5b);vertical-align:-4px;margin-right:4px}
+.board-area .inquiry-wrap td[colspan="2"] textarea{border:1px solid var(--line,#d9dfe7);background:#f7f9fc;color:var(--mute,#5b6676);font-size:13px!important;line-height:1.7;padding:14px!important;resize:none}
+/* 양식 내려받기 · 문의하기 버튼 */
+.board-area .cm-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.board-area .cm-btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border:1px solid var(--line,#d9dfe7);font-size:14px;font-weight:600;color:var(--main,#001d5b);transition:border-color .2s,background .2s}
+.board-area .cm-btn:hover{border-color:var(--main,#001d5b);background:#f2f6fb}
+.board-area .cm-btn .blet{width:14px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23001d5b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 4v11M7 10l5 5 5-5M5 20h14'/%3E%3C/svg%3E") center/contain no-repeat}
+.board-area .iq-btn{display:inline-flex;align-items:center;justify-content:center;min-width:220px;height:56px;padding:0 32px;background:var(--main,#001d5b);color:#fff;font-size:16px;font-weight:700;transition:background .2s}
+.board-area .iq-btn:hover{background:#00b4ed}
+
+/* ── 폰 ── */
+@media (max-width:680px){
+  .board-area{padding-left:16px;padding-right:16px}
+  .board-area td.att_title:nth-child(1),.board-area td.bbsno,.board-area td.att_title:nth-child(4),.board-area td.bbsetc_add2{display:none}
+  .board-area .board-wrap tr[onclick] td{padding:18px 6px}
+  .board-area td.bbsnewf5{font-size:15px}
+  .board-area td.bbsetc_add1{width:auto;font-size:12px;text-align:right}
+  .board-area #search_table input[type=text]{width:46vw}
+  .board-area .inquiry-wrap tr{display:flex;flex-direction:column}
+  .board-area td.formmail_title_bgcolor{width:auto!important;padding:14px 4px 6px!important;background:none;border-bottom:0!important}
+  .board-area td.formmail_cell_bgcolor{padding:0 0 14px!important}
+  .board-area .inquiry-wrap td[colspan="2"] table tr{display:flex;flex-direction:column}
+  .board-area .inquiry-wrap td[colspan="2"] table td{text-align:left!important}
+  .board-area .iq-btn{width:100%}
+}
+/* 폰: 문의 폼 표를 세로로 풀기 */
+@media (max-width:680px){
+  .board-area .inquiry-wrap,.board-area .inquiry-wrap > tbody,.board-area .inquiry-wrap > tbody > tr,.board-area .inquiry-wrap > tbody > tr > td{display:block!important;width:auto!important}
+  .board-area .inquiry-wrap col{display:none}
+  .board-area .inquiry-wrap > tbody > tr > td{border-bottom:0}
+  .board-area .inquiry-wrap > tbody > tr{border-bottom:1px solid var(--line,#d9dfe7);padding-bottom:4px}
+  .board-area td.formmail_cell_bgcolor input[type=text],.board-area td.formmail_cell_bgcolor select{max-width:none}
+}
+@media (max-width:680px){.board-area .inquiry-wrap > tbody > tr,.board-area .inquiry-wrap > tbody > tr > td{height:auto!important}}
