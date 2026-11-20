@@ -359,3 +359,7 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 .lnb .crumb{margin:0 0 0 auto}
 @media (max-width:1100px){.lnb .crumb{display:none}}
 .biz-sec{scroll-margin-top:170px}
+/* 사업분야: 탭으로 분야 하나씩 보기 */
+.biz-sec[hidden]{display:none!important}
+.biz-sec{padding-top:clamp(20px,2vw,32px)!important}
+.biz-sec .biz-h{border-top:0;padding-top:0}
