@@ -365,3 +365,7 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 .biz-sec .biz-h{border-top:0;padding-top:0}
 .biz-sec{padding-top:clamp(36px,3.4vw,60px)!important}
 .biz-sec{padding-bottom:clamp(64px,7vw,110px)}
+/* 서브 배너: 파란 막 최소화, 원본 색 그대로 + 글자 자리만 살짝 어둡게 */
+.sub-hero{background:#1b1f26}
+.sub-hero:after{background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.12) 45%,rgba(0,0,0,0) 65%),linear-gradient(0deg,rgba(0,0,0,.28),rgba(0,0,0,0) 55%)}
+.sub-hero h1,.sub-hero .en{text-shadow:0 2px 14px rgba(0,0,0,.35)}
