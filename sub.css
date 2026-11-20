@@ -347,3 +347,14 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 /* PROGRAM 번호 앞 아이콘: 깃대 있는 깃발(학교 의미) */
 .p-no i{width:18px;height:20px;clip-path:none;background:none;position:relative;flex:none}
 .p-no i:before{content:"";position:absolute;inset:0;background:var(--main,#001d5b);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 20'%3E%3Crect x='0' y='0' width='2.4' height='20'/%3E%3Cpath d='M2.4 0H18l-3.5 6.5L18 13H2.4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 20'%3E%3Crect x='0' y='0' width='2.4' height='20'/%3E%3Cpath d='M2.4 0H18l-3.5 6.5L18 13H2.4z'/%3E%3C/svg%3E") center/contain no-repeat}
+/* 경로 표시: 탭 메뉴 줄 오른쪽, 회색으로 약하게 */
+.lnb .wrap{align-items:center}
+.lnb .crumb{margin-left:auto;flex:none;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:400;letter-spacing:.02em;color:#9aa3b0;opacity:1;animation:none;transform:none}
+.lnb .crumb a,.lnb .crumb span{color:#9aa3b0;padding:0;font-size:13px;font-weight:400}
+.lnb .crumb a:after{display:none}
+.lnb .crumb a:hover{color:var(--main,#001d5b)}
+.lnb .crumb span:last-child{color:#6b7584}
+.lnb .crumb i{width:3px;height:3px;border-radius:50%;background:#c3c9d2}
+@media (max-width:860px){.lnb .crumb{display:none}}
+.lnb .crumb{margin:0 0 0 auto}
+@media (max-width:1100px){.lnb .crumb{display:none}}
