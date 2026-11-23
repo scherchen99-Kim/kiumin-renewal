@@ -66,7 +66,7 @@
   if (!dlg || !btn) return;
   const open = () => { dlg.show(); };
   btn.addEventListener('click', open);
-  const KEY = 'kiumin_popup_hide', today = new Date().toISOString().slice(0, 10);
+  const KEY = 'kiumin_popup_hide', today = (d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'))(new Date()); // 한국 시간 기준 날짜 → 다음날 0시에 다시 뜸
   const chk = dlg.querySelector('.op-today');
   const close = () => { if (chk && chk.checked) { try { localStorage.setItem(KEY, today); } catch (e) {} } dlg.close(); };
   dlg.querySelector('.op-close').addEventListener('click', close);
