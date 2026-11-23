@@ -64,14 +64,13 @@
   const dlg = document.querySelector('.promo-dlg');
   const btn = document.querySelector('.promo-more');
   if (!dlg || !btn) return;
-  const open = () => { dlg.showModal(); document.body.style.overflow = 'hidden'; };
+  const open = () => { dlg.show(); };
   btn.addEventListener('click', open);
   const KEY = 'kiumin_popup_hide', today = new Date().toISOString().slice(0, 10);
   const chk = dlg.querySelector('.op-today');
   const close = () => { if (chk && chk.checked) { try { localStorage.setItem(KEY, today); } catch (e) {} } dlg.close(); };
   dlg.querySelector('.op-close').addEventListener('click', close);
   dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
-  dlg.addEventListener('close', () => { document.body.style.overflow = ''; });
   /* 첫 화면 자동 팝업 (페이지 안 레이어라 팝업 차단과 무관) */
   let hidden = false; try { hidden = localStorage.getItem(KEY) === today; } catch (e) {}
   if (!hidden) setTimeout(() => { if (!dlg.open) open(); }, 1200);
