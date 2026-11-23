@@ -557,3 +557,7 @@ body{overflow-x:clip}
 /* 바로가기 버튼이 보일 때는 메일·위치 아이콘을 빼서 자리 확보 (오시는길·문의는 전체메뉴와 하단에 있음) */
 @media (min-width:1321px){.hd-links + .icons a{display:none}}
 .promo-dlg.orig-pop{will-change:transform;isolation:isolate} /* 첫 화면 영상 위에 확실히 그려지도록 */
+/* 링크 없는 프로젝트 카드 (곡성꿈놀자학교) */
+.story.nolink{cursor:default}
+.story.nolink:hover h3{color:inherit}
+.story.nolink:hover img{transform:none}
