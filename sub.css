@@ -58,7 +58,7 @@ body:has(#hdr:not(.hide)) .lnb{top:86px}
 .v-circle b{font-size:clamp(22px,2.4vw,30px);font-weight:700;letter-spacing:-.02em;font-family:"DM Sans","Pretendard Variable",sans-serif}
 .v-circle b span{font-size:1.25em}
 .v-circle small{font-size:14px;margin-top:4px;font-weight:600}
-.v-circle.c1{color:#1e3a96}.v-circle.c2{color:#e0893a}.v-circle.c3{color:#5a9a3a}
+.v-circle.c1{color:#0073BB}.v-circle.c2{color:#3D509C}.v-circle.c3{color:#8458A0}   /* 핵심가치 원: 허브와 같은 파랑·남색·보라 */
 .v-circle{opacity:0;transform:scale(.9);transition:opacity .9s var(--ease),transform 1s var(--ease)}
 .in .v-circle{opacity:1;transform:none}
 .in .v-circle.c2{transition-delay:.12s}.in .v-circle.c3{transition-delay:.24s}
