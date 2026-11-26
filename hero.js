@@ -93,9 +93,11 @@ document.querySelectorAll('[data-open-promo]').forEach((b) => b.addEventListener
         const p = Math.min(1, (t - t0) / dur);
         // 처음엔 숫자가 마구 빠르게 바뀌다가 끝에서 천천히 멈춤
         const e = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
-        const v = Math.round(start + (end - start) * e);
+        let v = Math.round(start + (end - start) * e);
+        // 작은 숫자(예: 07)는 금방 멈춰 보여서: 00→01→…→07 로 한 칸씩, 큰 숫자들과 같이 끝나게 (뒤로 가지 않음)
+        if (end < 100) v = Math.floor(p * end);   /* 고르게 한 칸씩, 마지막 순간에 07 */
         el.textContent = fmt(v, pad);
-        const speed = Math.abs(v - last) / Math.max(1, end) * 60; last = v;
+        const speed = end < 100 ? 0 : Math.abs(v - last) / Math.max(1, end) * 60; last = v;
         el.style.filter = `blur(${Math.min(2.2, speed * 6).toFixed(2)}px)`;
         if (p < 1) requestAnimationFrame(step);
         else { el.style.filter = ''; el.classList.add('done'); }
